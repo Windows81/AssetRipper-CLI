@@ -51,16 +51,23 @@ jobs:
             ./Source/0Bins/AssetRipper.CLI.Free/Release/${{ matrix.config.runtime }}/publish/*.dylib
             ./Source/0Bins/AssetRipper.CLI.Free/Release/${{ matrix.config.runtime }}/publish/compile_time.txt
           if-no-files-found: error
+          
+      - name: Generate Release Data
+        shell: bash
+        run: |
+          export LC_ALL=en_US.utf8
+          GIT_COMMIT_ID=$(echo "${{ github.sha }}" |  cut -c 1-7)
+          UPDATE_TIME=$(echo ${{ github.event.repository.updated_at }} | sed 's/[:-]//g')
+          echo "tag_name=v${UPDATE_TIME}" >> $GITHUB_ENV
+          echo "release_name=${UPDATE_TIME} (${GIT_COMMIT_ID})" >> $GITHUB_ENV
 
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Release with Notes
+        uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.date.outputs.date }}
-          release_name: ${{ steps.date.outputs.date }}
+          name: ${{ env.release_name }}
+          tag_name: ${{ env.tag_name }}
+          generate_release_notes: true
+          overwrite_files: false
           files: |
             ./Source/0Bins/AssetRipper.CLI.Free/Release/${{ matrix.config.runtime }}/publish/${{ matrix.config.executable }}
             ./Source/0Bins/AssetRipper.CLI.Free/Release/${{ matrix.config.runtime }}/publish/*.dll
