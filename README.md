@@ -1,7 +1,7 @@
 # AssetRipper CLI
 
 ```sh
-C:\Users\USER\Downloads\AssetRipper_win_x64\AssetRipper.GUI.Free.exe -InputPath ${input_dir} -OutputPath ${output_dir}
+C:\Users\USER\Downloads\AssetRipper_win_x64\AssetRipper.CLI.Free.exe -InputPath ${input_dir} -OutputPath ${output_dir}
 ```
 
 *Ignore the misleading `.GUI.Free` part of the name. This should be changed.*
