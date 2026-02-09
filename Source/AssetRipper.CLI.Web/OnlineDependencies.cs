@@ -1,4 +1,4 @@
-﻿using AssetRipper.CLI.Web.Dependencies;
+﻿using AssetRipper.GUI.Web.Dependencies;
 using AssetRipper.Import;
 using Microsoft.AspNetCore.Routing;
 

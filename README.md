@@ -4,8 +4,6 @@
 C:\Users\USER\Downloads\AssetRipper_win_x64\AssetRipper.CLI.Free.exe -InputPath ${input_dir} -OutputPath ${output_dir}
 ```
 
-*Ignore the misleading `.GUI.Free` part of the name. This should be changed.*
-
 AssetRipper is a tool for extracting assets from Unity serialized files (*CAB-*\*, *\*.assets*, *\*.sharedAssets*, etc.) and asset bundles (*\*.unity3d*, *\*.bundle*, etc.) and converting them into the native Unity engine format.
 
 AssetRipper supports Unity versions from `3.5.0` to `6000.5.X`. However, support quality may vary slightly for different Unity versions.
