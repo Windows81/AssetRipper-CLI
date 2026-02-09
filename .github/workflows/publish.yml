@@ -51,3 +51,14 @@ jobs:
             ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/*.dylib
             ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/compile_time.txt
           if-no-files-found: error
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: AssetRipper_${{ matrix.config.name }}
+          files: |
+            ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/${{ matrix.config.executable }}
+            ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/*.dll
+            ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/*.so
+            ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/*.dylib
+            ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/compile_time.txt
