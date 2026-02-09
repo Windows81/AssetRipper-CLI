@@ -1,21 +1,16 @@
 # AssetRipper CLI
 
-[![](https://img.shields.io/github/downloads/AssetRipper/AssetRipper/total.svg)](https://github.com/AssetRipper/AssetRipper/releases)
-[![](https://img.shields.io/github/downloads/AssetRipper/AssetRipper/latest/total.svg)](https://github.com/AssetRipper/AssetRipper/releases/latest)
-[![](https://img.shields.io/github/v/release/AssetRipper/AssetRipper)](https://github.com/AssetRipper/AssetRipper/releases/latest)
-[![](https://weblate.samboy.dev/widgets/assetripper/-/gui/svg-badge.svg)](http://weblate.samboy.dev/engage/assetripper/)
+```sh
+C:\Users\USER\Downloads\AssetRipper_win_x64\AssetRipper.GUI.Free.exe -InputPath ${input_dir} -OutputPath ${output_dir}
+```
 
-THIS IS A CLI VERSION OF ASSETRIPPER
+*Ignore the misleading `.GUI.Free` part of the name. This should be changed.*
 
 AssetRipper is a tool for extracting assets from Unity serialized files (*CAB-*\*, *\*.assets*, *\*.sharedAssets*, etc.) and asset bundles (*\*.unity3d*, *\*.bundle*, etc.) and converting them into the native Unity engine format.
 
 AssetRipper supports Unity versions from `3.5.0` to `6000.5.X`. However, support quality may vary slightly for different Unity versions.
 
-# Premium Edition
-
-[Patreon](https://www.patreon.com/ds5678) supporters at the `Premium` tier or higher receive access to the premium edition of AssetRipper. This edition includes additional [features and improvements](https://assetripper.github.io/AssetRipper/articles/PremiumFeatures.html).
-
-# Donationsa
+# Donations
 
 Your support helps maintain and improve AssetRipper. If you find this tool useful, please consider donating:
 
