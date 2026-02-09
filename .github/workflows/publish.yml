@@ -55,7 +55,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: AssetRipper_${{ matrix.config.name }}
           files: |
             ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/${{ matrix.config.executable }}
             ./Source/0Bins/AssetRipper.GUI.Free/Release/${{ matrix.config.runtime }}/publish/*.dll
